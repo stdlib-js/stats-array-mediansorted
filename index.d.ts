@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,27 +16,32 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { NumericArray, Collection, AccessorArrayLike } from '@stdlib/types/array';
 
 /**
-* Compute the median value of a sorted array.
+* Input array.
+*/
+type InputArray = NumericArray | Collection<number> | AccessorArrayLike<number>;
+
+/**
+* Computes the median value of a sorted array.
 *
-* @module @stdlib/stats-array-mediansorted
+* @param x - input array
+* @returns median value
 *
 * @example
-* var mediansorted = require( '@stdlib/stats-array-mediansorted' );
-*
 * var x = [ 1.0, 2.0, 3.0 ];
 *
 * var v = mediansorted( x );
 * // returns 2.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function mediansorted( x: InputArray ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = mediansorted;
